@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.8.9)  27 AUG 2023 16:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.8.9)  29 AUG 2023 21:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -167,8 +167,8 @@ and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
 <argument> $p_X\brak 
-                     {Z=0}$
-l.208 ...raggedright}\gnumbox[l]{$p_X\brak{Z=0}$}}
+                     {0}$
+l.208 ...{\raggedright}\gnumbox[l]{$p_X\brak{0}$}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -189,8 +189,8 @@ and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
 <argument> $p_X\brak 
-                     {Z=1}$
-l.217 ...raggedright}\gnumbox[l]{$p_X\brak{Z=1}$}}
+                     {1}$
+l.217 ...{\raggedright}\gnumbox[l]{$p_X\brak{1}$}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -201,7 +201,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \pr 
                     
-l.224 ...ight}\gnumbox[l]{$\pr{HHT+HTH+...+TTH}$}}
+l.224 ...gedright}\gnumbox[l]{$\pr{HHT+...+TTH}$}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -211,8 +211,8 @@ and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
 <argument> $1-p_X\brak 
-                       {Z=0}-p_X\brak {Z=1}$
-l.226 ...mbox[l]{$1-p_X\brak{Z=0}-p_X\brak{Z=1}$}}
+                       {0}-p_X\brak {1}$
+l.226 ...\gnumbox[l]{$1-p_X\brak{0}-p_X\brak{1}$}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -221,9 +221,9 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-<argument> $1-p_X\brak {Z=0}-p_X\brak 
-                                      {Z=1}$
-l.226 ...mbox[l]{$1-p_X\brak{Z=0}-p_X\brak{Z=1}$}}
+<argument> $1-p_X\brak {0}-p_X\brak 
+                                    {1}$
+l.226 ...\gnumbox[l]{$1-p_X\brak{0}-p_X\brak{1}$}}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -231,19 +231,14 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-Overfull \hbox (317.46977pt too wide) in paragraph at lines 154--233
-[][] 
- []
-
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./table.aux) ) 
 Here is how much of TeX's memory you used:
- 1544 strings out of 476091
- 25524 string characters out of 5794082
+ 1543 strings out of 476091
+ 25520 string characters out of 5794082
  1855330 words of memory out of 5000000
- 21952 multiletter control sequences out of 15000+600000
+ 21951 multiletter control sequences out of 15000+600000
  515023 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,11n,47p,203b,147s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -252,7 +247,7 @@ Here is how much of TeX's memory you used:
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on table.pdf (1 page, 39819 bytes).
+Output written on table.pdf (1 page, 39463 bytes).
 PDF statistics:
  28 PDF objects out of 1000 (max. 8388607)
  16 compressed objects within 1 object stream

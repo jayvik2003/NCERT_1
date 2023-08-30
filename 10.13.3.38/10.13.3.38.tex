@@ -220,30 +220,24 @@ Probability
 %\section{Chemistry}
 %\begin{enumerate}[label=\arabic*.,ref=\thesection.\theenumi]
 %\numberwithin{equation}{enumi}
-%
-\section{Question 10.13.3.38}In a game, the entry fee is Rs 5.The game consists of a tossing a coin 3 times.If one or two heads show, Sweta gets her entry fee back.If she throws 3 heads, she receives double the entry fees.Otherwise she will lose. For tossing a coin three times, find the probability that she
+\textbf{Q10.13.3.38:} In a game, the entry fee is Rs 5.The game consists of a tossing a coin 3 times.If one or two heads show, Sweta gets her entry fee back.If she throws 3 heads, she receives double the entry fees.Otherwise she will lose. For tossing a coin three times, find the probability that she 
 \begin{enumerate}
 	\item loses the entry fee.
 
 	\item gets double entry fee.
 
 	\item just gets her entry fee.
-\end{enumerate}
-\section{Solution}Let, $X_i$ be the sequence of independent Bernoulli random varibles. 
+\end{enumerate} 
+\textbf{Solution:} Let, $X_i$ be the sequence of independent Bernoulli random varibles and the total number of trials be n and $Z$ be the random variable that represents the number of tails in n trials which is given by:
 \begin{align}
-	X &= 
-  		\begin{cases}
-  			0, & \text{Tails}\\
-  			1, & \text{Heads} 
-  		\end{cases}
+p_X\brak{Z} = \comb{n}{k}p^{n-k}q^{k}
 \end{align}
-Let, the total number of trials be n and $Z$ be the random variable that represents the number of tails in n trials which is given by:
-\begin{align}
-p_X\brak{Z=k} = \comb{n}{k}p^{n-k}q^{k}
-\end{align}
-\begin{table}[!ht]
-	\input{tables/table}
-\end{table} \\
+\begin{table}[h]
+	\centering
+	\input{tables/table} 
+	\caption{Random Variables} 
+    \label{tab:exemplar/10/13/3/38}
+\end{table}
 Probability that she loses the entry fees,
 \begin{align}
 	p_X(Z = 0) 

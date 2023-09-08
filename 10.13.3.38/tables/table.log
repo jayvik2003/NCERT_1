@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.8.9)  4 SEP 2023 13:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.8.9)  8 SEP 2023 10:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -158,17 +158,18 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 Here is how much of TeX's memory you used:
  1540 strings out of 476091
  25502 string characters out of 5794082
- 1854330 words of memory out of 5000000
+ 1856330 words of memory out of 5000000
  21948 multiletter control sequences out of 15000+600000
  515023 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,12n,47p,203b,199s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on table.pdf (1 page, 14529 bytes).
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+Output written on table.pdf (1 page, 21725 bytes).
 PDF statistics:
- 13 PDF objects out of 1000 (max. 8388607)
- 7 compressed objects within 1 object stream
+ 18 PDF objects out of 1000 (max. 8388607)
+ 10 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

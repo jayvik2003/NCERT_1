@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.8.9)  10 SEP 2023 11:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.8.9)  11 SEP 2023 14:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1275,12 +1275,7 @@ File: ts1txr.fd 2000/12/15 v3.1
 \gnumericColA=\skip76
 \gnumericColB=\skip77
 \gnumericColC=\skip78
-)
-Underfull \hbox (badness 10000) in paragraph at lines 231--238
-
- []
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ] (./10.13.3.38.aux)
@@ -1288,11 +1283,11 @@ Package rerunfilecheck Info: File `10.13.3.38.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30301 strings out of 476091
- 596264 string characters out of 5794082
- 1881330 words of memory out of 5000000
+ 30305 strings out of 476091
+ 596290 string characters out of 5794082
+ 1883330 words of memory out of 5000000
  50021 multiletter control sequences out of 15000+600000
- 579326 words of font info for 171 fonts, out of 8000000 for 9000
+ 582078 words of font info for 175 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  101i,16n,96p,1178b,436s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -1302,7 +1297,7 @@ t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
 fonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on 10.13.3.38.pdf (1 page, 43289 bytes).
+Output written on 10.13.3.38.pdf (1 page, 43672 bytes).
 PDF statistics:
  68 PDF objects out of 1000 (max. 8388607)
  50 compressed objects within 1 object stream

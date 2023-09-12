@@ -228,39 +228,37 @@ Probability
 
 	\item just gets her entry fee.
 \end{enumerate} 
-\textbf{Solution:} Let, $X$ be the random variable that represent the number of heads appearing on dices.
+\textbf{Solution:} Let, $X_i$ be the random variable that represent the a single toss resulting in head and $Y$ be the random variable that represent the total tosses.
 \begin{table}[h]
 	\centering
 	\input{tables/table} 
-	\caption{Random Variables} 
+	\caption{} 
     \label{tab:exemplar/10/13/3/38}
-\end{table} 
+\end{table} \\
+The pmf of $Y$ is,
 \begin{align}
-\label{eq:pr-pts/1}\pr{X_i} &=
-	\begin{cases}
-		\frac{1}{8} & \text{,i=0 heads comes in 3 tosses}\\
-		\frac{3}{8} & \text{,i=1 heads comes in 3 tosses}\\
-		\frac{3}{8} & \text{,i=2 heads comes in 3 tosses}\\
-		\frac{1}{8} & \text{,i=3 heads comes in 3 tosses}
-	\end{cases}
+\label{eq:pr-pts/1}\pr{Y = k}=\comb{n}{k}\brak{p}^k\brak{q}^{n-k} && ,1 \leq k \leq n
 \end{align}
-From above equations \eqref{eq:pr-pts/1} we can say, \\
+From above equations \eqref{eq:pr-pts/1} we can say, 
 Probability that she loss the fees (0 heads),
 \begin{align}
-	\pr{X_0} 
- 		&= \frac{1}{8} \\
+	p_Y(0) 
+ 	 &= \comb{3}{0}\brak{\frac{1}{2}}^0\brak{\frac{1}{2}}^{3-0} \\
+ 	 &= \frac{1}{8} \\
 		\label{eq:pr-pts/5}&= 0.125 
 \end{align}
 Probability that she gets double entry fees(3 heads),
 \begin{align}
-	\pr{X_3}  
- 		&= \frac{1}{8} \\
-		\label{eq:pr-pts/8}&= 0.125 
+	p_Y(3) 
+ 	 	&= \comb{3}{3}\brak{\frac{1}{2}}^3\brak{\frac{1}{2}}^{3-3} \\
+ 	 	&= \frac{1}{8} \\
+		\label{eq:pr-pts/5}&= 0.125
 \end{align}
 Probability that she just gets the entry fees(1 heads + 2 heads),
 \begin{align}
-\pr{X_1 + X_2} &= \pr{X_1} + \pr{X_2} \\
-&= \frac{3}{8} + \frac{3}{8} \\
-\label{eq:pr-pts/11} &= 0.750 
+	p_Y(1)+p_Y(2) 
+ 	    &= \comb{3}{1}\brak{\frac{1}{2}}^1\brak{\frac{1}{2}}^{3-1} + \comb{3}{2}\brak{\frac{1}{2}}^2\brak{\frac{1}{2}}^{3-2} \\
+		&= \frac{3}{8} + \frac{3}{8} \\
+		\label{eq:pr-pts/11} &= 0.750 
 \end{align}
 \end{document}

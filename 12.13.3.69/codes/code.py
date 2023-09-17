@@ -30,5 +30,6 @@ probC= 1 - probA - probB + probA*probB
 
 #Simulation Vs Theory  
 print("Simulated = ",err_nC,"Theorical = ",probC)
+print("In this array 0 represents favourable outcome")
 print(data_bernC) # no of zeros represents the favourable outcomes
 

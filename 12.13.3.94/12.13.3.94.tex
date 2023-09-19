@@ -214,29 +214,19 @@ EE22BTECH11025
 % For peerreview papers, this IEEEtran command inserts a page break and
 % creates the second title. It will be ignored for other modes.
 %\IEEEpeerreviewmaketitle
-Question 12.13.5.6: If A and B are two independent events with $\pr{A}=\frac{3}{5}$ and $\pr{B}=\frac{4}{9}$ then, $\pr{A^\prime B^\prime}$
-\begin{enumerate}
-\item $\frac{4}{15}$ 
-\item $\frac{8}{45}$
-\item $\frac{1}{3}$
-\item $\frac{2}{9}$
-\end{enumerate}
-\solution Using de morgan's law and axioms of probability,
+Question 12.13.3.71: State True or False for the statement. \\ 
+If $\pr{A}>0$ and $\pr{B}>0$. Then A and B can be mutually exclusive and independent. \\
+\solution Since $\pr{A}>0$ and $\pr{B}>0$, 
+then,   
 \begin{align}
-\label{eq:12.13.3.69/1}\pr{A^\prime B^\prime} &= \pr{(A+B)^\prime} \\
-\label{eq:12.13.3.69/2}\pr{A+B} &= \pr{A} - \pr{B} - \pr{AB} 
+\label{eq:12.13.3.94/1}\pr{A}\pr{B}>0
 \end{align}
-Also, As $A$ and $B$ are independent,
+But, for $\pr{A}$ and $\pr{B}$ to be mutually exclusive and independent events 
 \begin{align}
-\label{eq:12.13.3.69/3}\pr{AB} = \pr{A}\pr{B}
+\label{eq:12.13.3.94/2} \pr{AB}&=0  \\
+\label{eq:12.13.3.94/3} \pr{AB}&=\pr{A}\pr{B} \\ 
+\implies \label{eq:12.13.3.94/4}\pr{A}\pr{B}&=0
 \end{align}
-Now,using the equations of \eqref{eq:12.13.3.69/1}, \eqref{eq:12.13.3.69/2} and \eqref{eq:12.13.3.69/3}
-\begin{align}
-\pr{A^\prime B^\prime} &= \pr{(A+B)^\prime} \\
-		  &= 1 - \pr{(A+B)} \\
-		  &= 1 - \pr{A} - \pr{B} - \pr{A}\pr{B} \\
-		  &= 1 - \brak{\frac{3}{5}} - \brak{\frac{4}{9}} - \brak{\frac{3}{5}}\brak{\frac{4}{9}} \\
-		  \label{eq:12.13.3.69/8}&= \frac{2}{9}
-\end{align}
-so option (4) is correct
+Thus, \eqref{eq:12.13.3.94/4} contradicts our initial assumption \eqref{eq:12.13.3.94/1}
+Hence, The above statement is false 
 \end{document}

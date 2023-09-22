@@ -1,17 +1,20 @@
 import numpy as np
-from math import comb
 import matplotlib.pyplot as plt
-from scipy.stats import bernoulli
-#Sample size
-simlen = 10000
-n=5
-for k1 in range(1,6):
-#Probability of the event 
-    prob1 = comb(5,k1)*(((4/5)**k1)*((1/5)**(5-k1)))
-#Generating sample date using Bernoulli r.v.
-    data_bern1 = bernoulli.rvs(size=simlen,p=prob1)
-#Calculating the number of favourable outcomes
-    err_ind1 = np.nonzero(data_bern1 == 1)
-#calculating the probability
-    err_n1 = np.size(err_ind1)/simlen
-    print(err_n1)
+from scipy.stats import binom, norm
+
+n = 5  
+p = 0.8  
+k = np.arange(0, n+1)  
+binomial_pmf = binom.pmf(k, n, p)
+mu = n * p
+sigma = np.sqrt(n * p * (1 - p))
+x = np.linspace(0, n, 1000)
+normal_pdf = norm.pdf(x, mu, sigma)
+plt.stem(k, binomial_pmf, label='Binomial PMF', basefmt='b-')
+plt.plot(x, normal_pdf, label='Gaussian PDF', color='r')
+plt.axvline(x=4, color='g', linestyle='--', label='x=4')
+plt.xlabel('Number of Swimmer')
+plt.ylabel('Probability')
+plt.legend()
+plt.savefig("/home/jay/Desktop/ncert1/9.3.6/figs/approx.png")
+plt.show()

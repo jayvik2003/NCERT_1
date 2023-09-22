@@ -222,24 +222,59 @@ Gaussian
 %\numberwithin{equation}{enumi}
 \textbf{Q9.3.6:} The probability that a student is not a swimmer is $\frac{1}{5}$ .Then the probability that out of five students, four are swimmers 
 \begin{enumerate}
-    \item $\comb{5}{4}\brak{\frac{4}{5}}^{4}\frac{1}{5}$ \label{item:12/13/5/15/1} \\
-    \item $\brak{\frac{4}{5}}^{4}\frac{1}{5}$ \label{item:12/13/5/15/2} \\
-    \item \label{3}$\comb{5}{1}\frac{1}{5}\brak{\frac{4}{5}}^{4}$\\
-    \item None of these
+    \item $\comb{5}{4}\brak{\frac{4}{5}}^{4}\frac{1}{5}$ \label{item:9.3.6/1} \\
+    \item $\brak{\frac{4}{5}}^{4}\frac{1}{5}$ \label{item:9.3.6/2} \\
+    \item \label{item:9.3.6/3}$\comb{5}{1}\frac{1}{5}\brak{\frac{4}{5}}^{4}$\\
+    \item \label{item:9.3.6/4}None of these
 \end{enumerate}
 \textbf{Solution:}
 \begin{table}[h]
 	\input{/home/jay/Desktop/ncert1/9.3.6/tables/table.tex}
 	\caption{Given Information}
-	\label{tab:9.3.6/Table1}
+	\label{tab:9.3.6/T/Table1}
 \end{table}
 The pmf of $X$ is,
 \begin{equation}
-p_{X}{(k)} = \comb{n}{k}p^{k}q^{n-k}
+\label{eq:9.3.6/1}p_{X}{(k)} = \comb{n}{k}p^{k}q^{n-k}
 \end{equation}
 and the desired probability is
 \begin{align}
-p_{X}{(4)} = \comb{5}{4}\brak{\frac{4}{5}}^{4}\brak{\frac{1}{5}}^{5-4}
+p_{X}{(4)} &= \comb{5}{4}\brak{\frac{4}{5}}^{4}\brak{\frac{1}{5}}^{5-4} \\
+\label{eq:9.3.6/3}&= 0.4096
 \end{align}
-Hence, option \ref{item:12/13/5/15/1} is correct.
+Let Y be gaussian variable
+\begin{align}
+\label{eq:9.3.6/4}\mu&=np\\
+&=4
+\end{align}
+\begin{align}
+\label{eq:9.3.6/6}\sigma^2&=npq\\
+&=\frac{4}{5}
+\end{align}
+Using Normal distribution at $X=4$.
+\begin{align}
+\label{eq:9.3.6/8}Z &= \frac{X-\mu}{\sigma}\\
+&=\frac{4-4}{\sqrt{\frac{4}{5}}}\\
+&=0
+\end{align}
+For pdf calculation
+\begin{align}
+\label{eq:9.3.6/11} f_Y(x)&=\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+\end{align}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\columnwidth]{figs/approx.png}
+\caption{Binomial pmf vs Gaussian pdf }
+\label{fig:9.3.6/F/Fig1}
+\end{figure} \\
+From the plot, pmf is close to normal distribution pdf. 
+\begin{align}
+p_Y(4)&=p_Z(0)\\
+\label{eq:9.3.6/13}&=0.44603
+\end{align}
+From \eqref{eq:9.3.6/3} and \eqref{eq:9.3.6/13},
+\begin{align}
+p_X(4)\approx p_Y(4)
+\end{align}
+Hence, option \eqref{item:9.3.6/3}
 \end{document}

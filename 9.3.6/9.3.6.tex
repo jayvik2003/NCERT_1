@@ -232,15 +232,7 @@ Gaussian
 	\input{/home/jay/Desktop/ncert1/9.3.6/tables/table.tex}
 	\caption{Given Information}
 	\label{tab:9.3.6/T/Table1}
-\end{table}
-The pmf of $X$ is,
-\begin{equation}
-\label{eq:9.3.6/1}p_{X}{(k)} = \comb{n}{k}p^{k}q^{n-k}
-\end{equation}
-and the desired probability is
-\begin{align}
-\label{eq:9.3.6/2}p_{X}{(4)} = \comb{5}{4}\brak{\frac{4}{5}}^{4}\brak{\frac{1}{5}}^{5-4} = 0.4096
-\end{align}
+\end{table} \\
 Let $Y$ be gaussian variable
 \begin{align}
 \label{eq:9.3.6/3}\mu=np=4
@@ -249,17 +241,21 @@ Let $Y$ be gaussian variable
 \label{eq:9.3.6/4}\sigma^2=npq=\frac{4}{5}
 \end{align}
 by the central limit theorem we can take a random variable $Z$ such that,
+Now, Z is a random variable with $\gauss{0}{1}$. Hence, the gaussian distribution function changes to:
+\begin{align}
+p_Z\brak{x} &= \frac{1}{\sqrt{2\pi}} e^{-\frac{{x}^2}{2}} \qquad \brak{x \in Z}
+\end{align}
 \begin{align}
 Z \approx \frac{Y-\mu}{\sigma}
-\end{align}
-Using Normal distribution at $Y=4$.
-\begin{align}
-\label{eq:9.3.6/6}Z = \frac{Y-\mu}{\sigma}=\frac{4-4}{\sqrt{\frac{4}{5}}}=0
 \end{align}
 For pdf calculation
 \begin{align}
 \label{eq:9.3.6/7} f_Y(x)&=\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}} \\
 \implies p_{Z}{(x)} &= \frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}
+\end{align}
+Using Normal distribution at $Y=4$.
+\begin{align}
+\label{eq:9.3.6/6}Z = \frac{Y-\mu}{\sigma}=\frac{4-4}{\sqrt{\frac{4}{5}}}=0
 \end{align}
 and probability at $Y=4$ is,
 \begin{align}
@@ -275,9 +271,9 @@ From the plot also, pmf is close to normal distribution pdf.
 \begin{align}
 \label{eq:9.3.6/10} p_Y(4)&=p_Z(0)=0.44603
 \end{align}
-From \eqref{eq:9.3.6/2} and \eqref{eq:9.3.6/10},
+From binomial desired probability is,
 \begin{align}
-p_X(4)\approx p_Y(4)
+p_{X}{(4)} = \comb{5}{4}\brak{\frac{4}{5}}^{4}\brak{\frac{1}{5}}^{5-4} = 0.4096 \approx p_Y(4)
 \end{align}
 Hence, option \eqref{item:9.3.6/3} is correct
 \end{document}

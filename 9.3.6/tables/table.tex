@@ -145,9 +145,9 @@
 %%                                                                  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{69pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{50pt*\gnumericScale}@{}}x\end{tabular}}
 \ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{70pt*\gnumericScale}@{}}x\end{tabular}}
-\ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{130pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{150pt*\gnumericScale}@{}}x\end{tabular}}
 
 \begin{tabular}[c]{%
 	b{\gnumericColA}%
@@ -231,17 +231,33 @@
 	 \multicolumn{1}{|p{\gnumericColA}|}%
 	{\gnumericPB{\centering}\gnumbox{$X_i$}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{$\{0,1,2,3,4,5\}$}}
+	{\gnumericPB{\centering}\gnumbox{$0\leq X \leq 5$}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{student who can swim}}
+	{\gnumericPB{\centering}\gnumbox{$X$ swimmer out of 5}}
 \\
 \hhline{|---|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
 	{\gnumericPB{\centering}\gnumbox{$Y$}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{$\sum_{i=0}^5X_i$}}
+	{\gnumericPB{\centering}\gnumbox{$0\leq X \leq 5$}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{five students considered}}
+	{\gnumericPB{\centering}\gnumbox{Gaussian variable}}
+\\
+\hhline{|---|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\centering}\gnumbox{$\mu$}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\centering}\gnumbox{$np=4$}}
+	&\multicolumn{1}{p{\gnumericColC}|}%
+	{\gnumericPB{\centering}\gnumbox{mean}}
+\\
+\hhline{|---|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\centering}\gnumbox{$\sigma^2$}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\centering}\gnumbox{$npq=\frac{4}{5}$}}
+	&\multicolumn{1}{p{\gnumericColC}|}%
+	{\gnumericPB{\centering}\gnumbox{variance}}
 \\
 \hhline{|-|-|-|}
 \end{tabular}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.8.9)  26 SEP 2023 12:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.8.9)  29 SEP 2023 03:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1240,90 +1240,77 @@ Package hyperref Info: Link coloring OFF on input line 93.
 \@outlinefile=\write4
 \openout4 = `9.3.6.out'.
 
-LaTeX Font Info:    Trying to load font information for U+txsya on input line 2
-23.
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsya.fd
-File: utxsya.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Trying to load font information for U+txsyb on input line 2
-23.
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyb.fd
-File: utxsyb.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Trying to load font information for U+txmia on input line 2
-23.
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
-File: utxmia.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Trying to load font information for U+txsyc on input line 2
-23.
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
-File: utxsyc.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Trying to load font information for TS1+txr on input line 2
-23.
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
-File: ts1txr.fd 2000/12/15 v3.1
-)
-Underfull \hbox (badness 10000) in paragraph at lines 225--226
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 226--227
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 227--228
-
- []
-
-(/home/jay/Desktop/ncert1/9.3.6/tables/table.tex
+ (/home/jay/Desktop/ncert1/65.2023/tables/table.tex
 \gnumericTableWidth=\skip73
 \gnumericTableWidthComplete=\skip74
 \gnumericMultiRowLength=\skip75
 \gnumericColA=\skip76
-\gnumericColB=\skip77
-\gnumericColC=\skip78
+LaTeX Font Info:    Trying to load font information for U+txsya on input line 1
+48.
+
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsya.fd
+File: utxsya.fd 2000/12/15 v3.1
 )
-<figs/approx.png, id=7, 462.528pt x 346.896pt>
-File: figs/approx.png Graphic file (type png)
-<use figs/approx.png>
-Package pdftex.def Info: figs/approx.png  used on input line 252.
-(pdftex.def)             Requested size: 252.0pt x 189.00427pt.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+LaTeX Font Info:    Trying to load font information for U+txsyb on input line 1
+48.
+
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyb.fd
+File: utxsyb.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Trying to load font information for U+txmia on input line 1
+48.
+
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
+File: utxmia.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Trying to load font information for U+txsyc on input line 1
+48.
+
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
+File: utxsyc.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Trying to load font information for TS1+txr on input line 1
+48.
+
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
+File: ts1txr.fd 2000/12/15 v3.1
+)
+\gnumericColB=\skip77
+)
+(/home/jay/Desktop/ncert1/65.2023/tables/tab_ans.tex
+\gnumericColC=\skip78
+
+Overfull \hbox (1.91574pt too wide) in paragraph at lines 152--224
+[][] 
+ []
+
+) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./figs/approx.png>] (./9.3.6.aux)
+
+] (./9.3.6.aux)
 Package rerunfilecheck Info: File `9.3.6.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30314 strings out of 476091
- 596473 string characters out of 5794082
- 1887330 words of memory out of 5000000
- 50027 multiletter control sequences out of 15000+600000
- 583428 words of font info for 177 fonts, out of 8000000 for 9000
+ 30293 strings out of 476091
+ 596350 string characters out of 5794082
+ 1879330 words of memory out of 5000000
+ 50012 multiletter control sequences out of 15000+600000
+ 583750 words of font info for 177 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  101i,14n,96p,1173b,436s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/txfonts/rtxsc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/tx
-fonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on 9.3.6.pdf (1 page, 73955 bytes).
+1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txf
+onts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on 9.3.6.pdf (1 page, 47965 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
+ 6 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

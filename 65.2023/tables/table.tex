@@ -125,7 +125,7 @@
 \setlength\gnumericTableWidth{%
 	69pt+%
 	41pt+%
-	173pt+%
+	50pt+%
 0pt}
 \def\gumericNumCols{3}
 \setlength\gnumericTableWidthComplete{\gnumericTableWidth+%
@@ -146,13 +146,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{50pt*\gnumericScale}@{}}x\end{tabular}}
-\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{70pt*\gnumericScale}@{}}x\end{tabular}}
-\ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{150pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{150pt*\gnumericScale}@{}}x\end{tabular}}
+
 
 \begin{tabular}[c]{%
 	b{\gnumericColA}%
 	b{\gnumericColB}%
-	b{\gnumericColC}%
 	}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -187,79 +186,70 @@
 %	\endlastfoot
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\hhline{|-|-|-}
+\hhline{|-|-}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\centering}\gnumbox{\textbf{Parameter}}}
+	{\gnumericPB{\centering}\gnumbox{\textbf{Symbols}}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{\textbf{Value}}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{\textbf{Description}}}
+	{\gnumericPB{\centering}\gnumbox{\textbf{Frequency of occurance}}}
+	
 \\
-\hhline{|---|}
+\hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\centering}\gnumbox{$n$}}
+	{\gnumericPB{\centering}\gnumbox{a}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{$5$}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{number of students}}
+	{\gnumericPB{\centering}\gnumbox{$\frac{1}{2}$}}
+	
 \\
-\hhline{|---|}
+\hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\centering}\gnumbox{$q$}}
+	{\gnumericPB{\centering}\gnumbox{b}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{$\frac{1}{5}$}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{not a swimmer}}
+	{\gnumericPB{\centering}\gnumbox{$\frac{1}{4}$}}
+	
 \\
-\hhline{|---|}
+\hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\centering}\gnumbox{$p$}}
+	{\gnumericPB{\centering}\gnumbox{c}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{$\frac{4}{5}$}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{swimmer}}
+	{\gnumericPB{\centering}\gnumbox{$\frac{1}{8}$}}
+	
 \\
-\hhline{|---|}
+\hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\centering}\gnumbox{$k$}}
+	{\gnumericPB{\centering}\gnumbox{d}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{$4$}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{number of swimmers}}
+	{\gnumericPB{\centering}\gnumbox{$\frac{1}{16}$}}
+	
 \\
-\hhline{|---|}
+\hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\centering}\gnumbox{$X$}}
+	{\gnumericPB{\centering}\gnumbox{e}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{$0\leq X \leq 5$}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{$X$ swimmer out of 5}}
+	{\gnumericPB{\centering}\gnumbox{$\frac{1}{32}$}}
+	
 \\
-\hhline{|---|}
+\hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\centering}\gnumbox{$Y$}}
+	{\gnumericPB{\centering}\gnumbox{f}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{$0\leq Y \leq 5$}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{Gaussian variable}}
+	{\gnumericPB{\centering}\gnumbox{$\frac{1}{64}$}}
+	
 \\
-\hhline{|---|}
+\hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\centering}\gnumbox{$\mu$}}
+	{\gnumericPB{\centering}\gnumbox{g}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{$np=4$}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{mean}}
+	{\gnumericPB{\centering}\gnumbox{$\frac{1}{128}$}}
+	
 \\
-\hhline{|---|}
+\hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\centering}\gnumbox{$\sigma^2$}}
+	{\gnumericPB{\centering}\gnumbox{h}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{$npq=\frac{4}{5}$}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{variance}}
+	{\gnumericPB{\centering}\gnumbox{$\frac{1}{128}$}}
+	
 \\
-\hhline{|-|-|-|}
+\hhline{|-|-|}
 \end{tabular}
 
 \ifthenelse{\isundefined{\languageshorthands}}{}{\languageshorthands{\languagename}}

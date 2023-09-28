@@ -23,3 +23,8 @@ plt.legend()
 
 plt.savefig("/home/jay/Desktop/ncert1/9.3.6/figs/approx.png")
 plt.show()
+
+#o = np.ones(8)
+#q = np.subtract(o,p)
+#zero = np.zeros(1000)
+

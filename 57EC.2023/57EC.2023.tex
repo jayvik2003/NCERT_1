@@ -239,15 +239,17 @@ Var(X_iX_{i+1})&=E(X_{i}^2X_{i+1}^2)-[E(X_iX_{i+1})]^2 = 1 \\
 &\label{65/st/23:eq5}\implies Var(Y_n)=1
 \end{align}
 \begin{enumerate}[label=(\Alph*)]
-\item Using \eqref{65/st/23:eq3} and \eqref{65/st/23:eq5},
+\item For $\{\sqrt{n}Y_n\}_{n \geq 1}$ to converges in distribution to a standard normal random variable ,
 \begin{align}
-E(\sqrt{n}Y_n) &= \sqrt{n}\brak{\frac{1}{n}}E(X_1X_2+X_3X_4...) \\
-&= \sqrt{n}\brak{\frac{1}{n}}\brak{E(X_1)E(X_2)E(X_3)E(X_4)...} \\
-&= 0 \\
-Var(\sqrt{n}Y_n) &= \sqrt{n}(Var(X_1X_2)+Var(X_3X_4)...) \\
-&= n^2\brak{\frac{1}{n}}(1+1+...) \\
-&= 1 \\
-& \{\sqrt{n}Y_n\} \sim \mathcal{N}(0,1)
+lim_{n \to \infty} F_{\sqrt{n}Y_n}(x) = 0
+\end{align}
+\begin{align}
+lim_{n \to \infty} F_{\sqrt{n}Y_n}(x) 
+&= lim_{n \to \infty} \frac{1}{\sqrt{n}}F_{{\brak{X_1X_2}}}(x) + \\&  ... + \frac{1}{\sqrt{n}}F_{{\brak{X_2nX_{2n-1}}}}(x) \\
+&= lim_{n \to \infty} \frac{1}{\sqrt{n}}F_{X_1}(x)F_{X_2}(x) + \\&  ... + \frac{1}{\sqrt{n}}F_{X_{2n}}(x)F_{X_{2n-1}}(x) \\ 
+&\because F_{X_{i}} = F_{X_{i+1}} , X_{i} \sim \mathcal{N}(0,1) \\
+&= lim_{n \to \infty} \sqrt{n}\brak{\frac{1}{\sqrt{2\pi}}e^{x^2}} \\
+&= 0
 \end{align}
 So, option (A) is correct\
 \item For 2nd mean to be converging to 0,

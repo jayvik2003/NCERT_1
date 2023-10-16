@@ -234,7 +234,7 @@ Then which of the following statements is/are true?
 \textbf{Solution:}As $X_i$ is a sequence of independent and identically distributed random variables, \\ 
 Since $X_1,X_2,X_3,X_4$ are independent R.V ,
 \begin{align}
-p_{X_1X_2X_3X_4}(x) &= p_{X_1}(x)p_{X_2}(x)p_{X_3}(x)p_{X_4}(x) \\
+P_{X_1X_2X_3X_4}(x) &= p_{X_1}(x)p_{X_2}(x)p_{X_3}(x)p_{X_4}(x) \\
 &= p_{X_1X_2}(x)p_{X_3X_4}(x) \\
 &= p_{\brak{X_1X_2}\brak{X_3X_4}}(x) 
 \end{align}
@@ -242,32 +242,34 @@ $X_iX_{i+1}$ is a independent R.V \\
 Also, $X_1,X_2,X_3,X_4$ are identical distributed R.V \\
 Then, $X_1X_2$ and $X_3X_4$ are also identical distributed R.V \\
 Thus,$X_iX_{i+1}$ is a identical distributed R.V. \\
-Hence $\sum_{i=1}^{2n-1} X_iX_{i+1}$ is iid.
+Hence $\sum_{i=1}^{2n-1} X_iX_{i+1}$ is iid. \\
+Now, let $Z_i = X_iX_{i+1}$ then,
 \begin{align}
-E(X_iX_{i+1})&=E(X_i)E(X_{i+1})=0 \\
-&\label{65/st/23:eq3}\implies E(Y_n)=0 \\
-Var(X_iX_{i+1})&=E(X_{i}^2X_{i+1}^2)-[E(X_iX_{i+1})]^2 = 1 \\
-&\label{65/st/23:eq5}\implies Var(Y_n)=\frac{1}{n} \\
-\end{align}
+E(Z_i)&=E(X_i)E(X_{i+1})=0 \\ 
+Var(Z_i)&=E(Z_i^2)-[E(Z_i)]^2 = 1 \\
+&\implies Z \sim \mathcal{N}(0,1) \\
+&Y_n=\frac{1}{n}\brak{\sum_{i=1}^{2n-1} Z_i} \\
+&\implies E(Y_n)=0 \\
+&\implies Var(Y_n)=\frac{1}{n} \\
+&\label{65/st/23:eq11}\implies Y \sim \mathcal{N}\brak{0,\frac{1}{\sqrt{n}}}
+\end{align} 
 \begin{enumerate}[label=(\Alph*)]
-\item Using \eqref{65/st/23:eq3} and \eqref{65/st/23:eq5}, 
+\item Using \eqref{65/st/23:eq11}, 
 \begin{align}
-E(\sqrt{n}Y_n)=0 \\
-Var(\sqrt{n}Y_n)=\frac{1}{\sqrt{n}} 
+\sqrt{n}Y \sim \mathcal{N}\brak{0,1} 
 \end{align}
-For some $\{Z_n\}_{n \geq 1}$  converges in distribution to $Z$, $Z_n \xrightarrow{d} Z$, then for all z,
+For some $\{P_n\}_{n \geq 1}$  converges in distribution to $P$, $P_n \xrightarrow{d} P$, then for all p,
 \begin{align}
-lim_{n \to \infty} F_{Z_n}(x) = F_{Z}(x) 
+lim_{n \to \infty} F_{P_n}(x) = F_{P}(x) 
 \end{align}
-where, $Z \sim \mathcal{N}(0,1)$
+where, $P \sim \mathcal{N}(0,1)$
 \begin{align}
 lim_{n \to \infty} F_{\sqrt{n}Y_n} 
-&= lim_{n \to \infty} \int_{-\infty}^{x} \frac{1}{\sqrt{2\pi\brak{\frac{1}{\sqrt{n}}}}}e^{-\frac{\brak{x-0}^2}{2\brak{\frac{1}{\sqrt{n}}}}} \,dx \\
-&= lim_{n \to \infty} \int_{-\infty}^{x} \frac{\sqrt[4]{n}}{\sqrt{2\pi}}e^{-\frac{\brak{\sqrt[4]{n}x}^2}{2}} \,dx \\
+&= lim_{n \to \infty} \int_{-\infty}^{x} \frac{1}{\sqrt{2\pi\brak{1}}}e^{-\frac{\brak{x-0}^2}{2\brak{1}^2}} \,dx \\
 &= lim_{n \to \infty} \int_{-\infty}^{x} \frac{1}{\sqrt{2\pi}}e^{-\frac{\brak{x}^2}{2}} \,dx \\
-&=F_Z(x)
+&=F_P(x)
 \end{align}
-where, $Z \sim \mathcal{N}(0,1)$ \\
+where, $P \sim \mathcal{N}(0,1)$ \\
 So, option (A) is correct\
 \item For 2nd mean to be converging to 0,
 \begin{align}
@@ -280,9 +282,10 @@ lim_{n \to \infty} E(|Y_n-0|^2)&=lim_{n \to \infty} E(Y_n^2) \\
 Thus,$\{Y_n\}_{n \geq 1}$ converges in 2nd mean to 0
 Hence, option (B) is correct.
 \item For $\{Y_n+\frac{1}{n}\}_{n \geq 1}$ to be converging $Y_n +\frac{1}{n} \xrightarrow{p} 0$
+Using \eqref{65/st/23:eq11} ,
 \begin{align}
 E(Y_n+\frac{1}{n}) = \frac{1}{n} \\
-Var(Y_n+\frac{1}{n}) = \frac{1}{n}
+Var(Y_n+\frac{1}{n}) = \frac{1}{n} \\
 \end{align}  
 \begin{align}
 lim_{n \to \infty} F_{Y_n+\frac{1}{n}} 

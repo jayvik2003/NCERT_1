@@ -290,6 +290,7 @@ Y+\frac{1}{n} \sim \mathcal{N}\brak{\frac{1}{n},\frac{1}{\sqrt{n}}}
 lim_{n \to \infty} F_{Y_n+\frac{1}{n}} 
 &= lim_{n \to \infty} \int_{-\infty}^{x} \frac{1}{\sqrt{2\pi\brak{\frac{1}{n}}}}e^{-\frac{\brak{x-\frac{1}{n}}^2}{2\brak{\frac{1}{n}}}} \,dx \\
 &= lim_{n \to \infty} \int_{-\infty}^{x} \frac{n}{\sqrt{2\pi}}e^{-\frac{\brak{n^2x-n}^2}{2}} \,dx \\
+&= lim_{n \to \infty} \int_{-\infty}^{x} \frac{1}{\sqrt{2\pi}}e^{-\frac{\brak{nx-n}^2}{2}} \,dx \\
 &= 0
 \end{align}
 Thus, $Y_n +\frac{1}{n} \xrightarrow{d} 0 \implies Y_n +\frac{1}{n} \xrightarrow{p} 0$ \\

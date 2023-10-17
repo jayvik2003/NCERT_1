@@ -281,19 +281,20 @@ lim_{n \to \infty} E(|Y_n-0|^2)&=lim_{n \to \infty} E(Y_n^2) \\
 \end{align}
 Thus,$\{Y_n\}_{n \geq 1}$ converges in 2nd mean to 0
 Hence, option (B) is correct.
-\item For $\{Y_n+\frac{1}{n}\}_{n \geq 1}$ to be converging $Y_n +\frac{1}{n} \xrightarrow{p} 0$
-Using \eqref{65/st/23:eq11} ,
+\item For $\{Y_n+\frac{1}{n}\}_{n \geq 1}$ to be converging $Y_n +\frac{1}{n} \xrightarrow{p} 0$ \\
+Let $Q_n = Y_n +\frac{1}{n}$ 
+by using \eqref{65/st/23:eq11} ,
 \begin{align}
-Y+\frac{1}{n} \sim \mathcal{N}\brak{\frac{1}{n},\frac{1}{\sqrt{n}}}
+Q \sim \mathcal{N}\brak{\frac{1}{n},\frac{1}{\sqrt{n}}}
 \end{align}  
 \begin{align}
-lim_{n \to \infty} F_{Y_n+\frac{1}{n}} 
+lim_{n \to \infty} F_{Q_n} 
 &= lim_{n \to \infty} \int_{-\infty}^{x} \frac{1}{\sqrt{2\pi\brak{\frac{1}{n}}}}e^{-\frac{\brak{x-\frac{1}{n}}^2}{2\brak{\frac{1}{n}}}} \,dx \\
 &= lim_{n \to \infty} \int_{-\infty}^{x} \frac{n}{\sqrt{2\pi}}e^{-\frac{\brak{n^2x-n}^2}{2}} \,dx \\
 &= lim_{n \to \infty} \int_{-\infty}^{x} \frac{1}{\sqrt{2\pi}}e^{-\frac{\brak{nx-n}^2}{2}} \,dx \\
 &= 0
 \end{align}
-Thus, $Y_n +\frac{1}{n} \xrightarrow{d} 0 \implies Y_n +\frac{1}{n} \xrightarrow{p} 0$ \\
+Thus, $Q_n=Y_n +\frac{1}{n} \xrightarrow{d} 0 \implies Y_n +\frac{1}{n} \xrightarrow{p} 0$ \\
 Note: This condition is only true for converges at real constants. \\
 Hence, option (C) is correct.
 \item let $\{X_n\}_{n \geq 1}$ almost surely converges to $0$.

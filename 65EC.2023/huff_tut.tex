@@ -48,7 +48,7 @@
 %\usepackage{algpseudocode}
 %\usepackage{enumitem}
 %\usepackage{mathtools}
-%\usepackage{tikz}
+\usepackage{tikz}
 %\usepackage{circuitikz}
 %\usepackage{verbatim}
 %\usepackage{tfrupee}
@@ -100,7 +100,7 @@
 
 \title{
 %	\logo{
-GATE-EC2023
+Tutorial for Huffman code generation
 %	}
 }
 \author{ Jay Vikrant EE22BTECH11025
@@ -219,124 +219,11 @@ GATE-EC2023
 %\section{Chemistry}
 %\begin{enumerate}[label=\arabic*.,ref=\thesection.\theenumi]
 %\numberwithin{equation}{enumi}
-\textbf{Q65ST.2023:}Let $\{X_n\}_{n \geq 1}$ be a sequence of independent and identically distributed random variables with mean 0 and variance 1, all of them defined on the same
-probability space. For n=1,2,3,..., let
-\begin{align}
-Y_n=\frac{1}{n}{\brak{X_1X_2+X_3X_4+...+X_{2n-1}X_{2n}}} 
-\end{align}
-Then which of the following statements is/are true? 
-\begin{enumerate}[label=(\Alph*)]
-\item $\{\sqrt{n}Y_n\}_{n \geq 1}$ converges in distribution to a standard normal random variable.
-\item $\{Y_n\}_{n \geq 1}$ converges in 2nd mean to 0.
-\item $\{Y_n+\frac{1}{n}\}_{n \geq 1}$ converges in probability to 0.
-\item $\{X_n\}_{n \geq 1}$ converges almost surely to 0.
-\end{enumerate}
-\textbf{Solution:}As $X_i$ is a sequence of independent and identically distributed random variables, \\
-Let $Z_i = X_iX_{i+1}$. \\ 
-\begin{align}
-p_{Z_iZ_j}(x)&=p_{X_iX_{i+1}X_jX_{j+1}}(x) \\ 
-&= p_{X_i}(x)p_{X_{i+1}}(x)p_{X_j}(x)p_{X_{j+1}}(x) \\
-&= p_{X_iX_{i+1}}(x)p_{X_jX_{j+1}}(x) \\
-&= p_{Z_i}(x)p_{Z_j}(x)
-\end{align}
-$Z_i$ is a independent R.V . Similarly,
-\begin{align}
-F_{X_i}(x) = F_{X_{i+1}}(x) = F_{X_j}(x) = F_{X_{j+1}}(x) \\
-F_{X_i}(x)F_{X_{i+1}}(x) = F_{X_j}(x)F_{X_{j+1}}(x) \\
-F_{Z_i}(x) = F_{Z_j}(x)
-\end{align}
-Thus, $Z_i$ is an identical distributed R.V. \\
-Hence,
-\begin{align} Z_n=\sum_{i=1}^{2n-1}Z_i 
-\end{align} is an i.i.d 
-\begin{align}
-\text{E}\brak{Z_i}&=\text{E}\brak{X_iX_{i+1}} \\
-&=\text{E}\brak{X_i}\text{E}\brak{X_{i+1}} = 0 \\
-\text{Var}(Z_i)&=\text{E}(Z_i^2)-\sbrak{\text{E}\brak{Z_i}}^2 \\
-&=\text{E}(Z_i^2)-0 \\ 
-&=\text{E}(X_i^2X_{i+1}^2) \\
-&=\text{E}(X_{i}^2)\text{E}(X_{i+1}^2) = 1  
-\end{align}
-\begin{align}
-Y_n&=\frac{1}{n}\brak{\sum_{i=1}^{2n-1} Z_i} \\
-E(Y_n)&=E(X_i)E(X_{i+1})=0 \\ 
-Var\brak{Y_n} &= \text{E}\sbrak{\brak{\frac{1}{n} \sum_{i=1}^{n} Z_i}^2}-\brak{\text{E}\sbrak{\frac{1}{n} \sum_{i=1}^{n} Z_i}}^2 \\
-&=\frac{1}{n^2} \cbrak{\text{E}\sbrak{\brak{\sum_{i=1}^{n} Z_i}^2}-\brak{\text{E}\sbrak{\sum_{i=1}^{n} Z_i}}^2} \\
-&=\frac{1}{n^2}\cbrak{\sum_{i=1}^{n}\sum_{j=1}^{n}\brak{\text{E}\brak{Z_iZ_j}-\text{E}\brak{Z_i}\text{E}\brak{Z_j}}} \\
-&=\frac{1}{n^2}\cbrak{\sum_{i=1}^{n}\sum_{j=1}^{n}\text{cov}\brak{Z_i, Z_j}} 
-\end{align}
-As all the variables are i.i.d's and are thus uncorrelated,
-\begin{align}
-&\text{cov}\brak{X_i, X_j} =
-\begin{cases}
-	0 & \text{if } i \ne j\\
-    \text{var}\brak{X_i} & \text{if } i = j
-\end{cases} \\
-\text{var}\brak{Y_n}&=\frac{1}{n^2}\brak{\sum_{i=1}^{n}\text{cov}\brak{Z_i, Z_i}}\\
-&= \frac{1}{n^2} \brak{\sum_{i=1}^{n} \text{var}\brak{Z_i}}\\
-&= \frac{1}{n^2} \brak{\sum_{i=1}^{n} 1}\\
-&= \frac{1}{n}
-\end{align}
-\begin{enumerate}[label=(\Alph*)]
-\item 
-For some $\{P_n\}_{n \geq 1}$  converges in distribution to $P$, $P_n \xrightarrow{d} P$, then for all p,
-\begin{align}
-lim_{n \to \infty} F_{P_n}(x) = F_{P}(x) 
-\end{align}
-since it is true for all p, so it is also be true for normal distribution
-\begin{align}
-lim_{n \to \infty} F_{\sqrt{n}Y_n} 
-&= lim_{n \to \infty} \int_{-\infty}^{x} \frac{1}{\sqrt{2\pi\brak{1}}}e^{-\frac{\brak{x-0}^2}{2\brak{1}^2}} \,dx \\
-&= lim_{n \to \infty} \int_{-\infty}^{x} \frac{1}{\sqrt{2\pi}}e^{-\frac{\brak{x}^2}{2}} \,dx \\
-&=F_P(x)
-\end{align}
-where, $P \sim \mathcal{N}(0,1)$ \\
-So, option (A) is correct\
-\item For 2nd mean to be converging to 0,
-\begin{align}
-lim_{n \to \infty} E(|Y_n-0|^2)&=lim_{n \to \infty} E(Y_n^2) \\
-&\because \frac{1}{n} = E(Y_n^2) - [E(Y_n)]^2 \\
-&=lim_{n \to \infty} \frac{1}{n} + [E(Y_n)]^2 \\
-&\because [E(Y_n)]^2 = 0 \\
-&=lim_{n \to \infty} \frac{1}{n} = 0 
-\end{align}
-Thus,$\{Y_n\}_{n \geq 1}$ converges in 2nd mean to 0
-Hence, option (B) is correct.
-\item For $\{Y_n+\frac{1}{n}\}_{n \geq 1}$ to be converging $Y_n +\frac{1}{n} \xrightarrow{p} 0$ \\
-\begin{align}
-\lim_{n \to \infty} \pr{|Y_n +\frac{1}{n}-Y| \geq  \epsilon} 
-&=\lim_{n \to \infty} \pr{|Y_n +\frac{1}{n}| \geq  \epsilon} \\ 
-&\leq \lim_{n \to \infty} \frac{Var(Y_n +\frac{1}{n})}{\epsilon^2} \\
-& \forall \epsilon > 0 \\
-&=\lim_{n \to \infty} \frac{Var(Y_n)+Var(\frac{1}{n})}{\epsilon^2} \\
-&=\lim_{n \to \infty} \frac{\frac{1}{n}+0}{\epsilon^2} \\
-&= 0
-\end{align} 
-\item For $X_n = \sum_{i=1}^n X_i$ converges almost surely to $0$. \\
-$X_n \xrightarrow{p} X$ ,where $X=0$.
-and,
-\begin{align}
-\lim_{n \to \infty} \pr{|X_n - X| \geq  \epsilon} = 1 
-\end{align}
-As all the variables are i.i.d's and are thus uncorrelated,
-\begin{align}
-&\text{cov}\brak{X_i, X_j} =
-\begin{cases}
-	0 & \text{if } i \ne j\\
-    \text{var}\brak{X_i} & \text{if } i = j
-\end{cases} \\
-\text{var}\brak{X_n}&=\sum_{i=1}^{n}\text{cov}\brak{X_i, X_i} \\
-&= \sum_{i=1}^{n} \text{var}\brak{X_i}\\
-&= \sum_{i=1}^{n} 1\\
-&= n
-\end{align}
-\begin{align}
-\lim_{n \to \infty} \pr{|X_n| \geq  \epsilon}  
-\leq \lim_{n \to \infty} \frac{Var(X_n)}{\epsilon^2} \\
-& \forall \epsilon > 0 \\
-=\lim_{n \to \infty} \frac{Var(X_n)}{\epsilon^2} \\
-=\lim_{n \to \infty} \frac{n}{\epsilon^2} = \infty
-\end{align} 
-Hence,option (D) is incorrect
+\lstinputlisting{/home/jay/Desktop/ncert1/65EC.2023/codes/huff_gen.py}
+\begin{enumerate}
+\item define all the parameter for the huffman tree i.e \textbf{class node:}. Also rearrange the frequency in ascending order
+\item Using a function \textbf{printNodes(node,val='')} to create the tree print the huffman code.
+\item \textbf{while len(nodes)>1} is loop to assign values to the node from the previous step
+\item finally printing the code.
 \end{enumerate}
 \end{document}

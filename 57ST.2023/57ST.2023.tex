@@ -259,11 +259,8 @@ Hence,
 \end{align}
 \begin{align}
 Y_n&=\frac{1}{n}\brak{\sum_{i=1}^{2n-1} Z_i} \\
-E(Y_n)&=E(X_i)E(X_{i+1})=0 \\ 
-Var\brak{Y_n} &= \text{E}\sbrak{\brak{\frac{1}{n} \sum_{i=1}^{n} Z_i}^2}-\brak{\text{E}\sbrak{\frac{1}{n} \sum_{i=1}^{n} Z_i}}^2 \\
-&=\frac{1}{n^2} \cbrak{\text{E}\sbrak{\brak{\sum_{i=1}^{n} Z_i}^2}-\brak{\text{E}\sbrak{\sum_{i=1}^{n} Z_i}}^2} \\
-&=\frac{1}{n^2}\cbrak{\sum_{i=1}^{n}\sum_{j=1}^{n}\brak{\text{E}\brak{Z_iZ_j}-\text{E}\brak{Z_i}\text{E}\brak{Z_j}}} \\
-&=\frac{1}{n^2}\cbrak{\sum_{i=1}^{n}\sum_{j=1}^{n}\text{cov}\brak{Z_i, Z_j}} 
+\text{E}(Y_n)&=\text{E}(\frac{1}{n}\sum_{i=1}^{2n-1} Z_i) \\
+&= \frac{1}{n}\sum_{i=1}^{2n-1} \text{E}(Z_i) = 0 
 \end{align}
 As all the variables are i.i.d's and are thus uncorrelated,
 \begin{align}
@@ -272,10 +269,10 @@ As all the variables are i.i.d's and are thus uncorrelated,
 	0 & \text{if } i \ne j\\
     \text{var}\brak{X_i} & \text{if } i = j
 \end{cases} \\
-\text{var}\brak{Y_n}&=\frac{1}{n^2}\brak{\sum_{i=1}^{n}\text{cov}\brak{Z_i, Z_i}}\\
-&= \frac{1}{n^2} \brak{\sum_{i=1}^{n} \text{var}\brak{Z_i}}\\
-&= \frac{1}{n^2} \brak{\sum_{i=1}^{n} 1}\\
-&= \frac{1}{n}
+\text{var}\brak{Y_n}&=\frac{1}{n^2}\brak{\sum_{i=1}^{2n-1}\text{cov}\brak{Z_i, Z_i}}\\
+&= \frac{1}{n^2} \brak{\sum_{i=1}^{2n-1} \text{var}\brak{Z_i}}\\
+&= \frac{1}{n^2} \brak{\sum_{i=1}^{2n-1} 1}\\
+&= \frac{2n-1}{n^2}
 \end{align}
 \begin{enumerate}[label=(\Alph*)]
 \item 
@@ -286,12 +283,12 @@ lim_{n \to \infty} F_{P_n}(x) = F_{P}(x)
 since it is true for all p, so it is also be true for normal distribution
 \begin{align}
 \text{E}\brak{\sqrt{n}Y_n}=\sqrt{n}\text{E}\brak{Y_n}=0 \\
-\text{Var}\brak{\sqrt{n}Y_n}=\brak{\sqrt{n}}^2\text{Var}\brak{Y_n} = 1
+\text{Var}\brak{\sqrt{n}Y_n}=\brak{\sqrt{n}}^2\text{Var}\brak{Y_n} = \frac{2n-1}{n}
 \end{align}
 \begin{align}
 lim_{n \to \infty} F_{\sqrt{n}Y_n} 
-&= lim_{n \to \infty} \int_{-\infty}^{x} \frac{1}{\sqrt{2\pi\brak{1}}}e^{-\frac{\brak{x-0}^2}{2\brak{1}^2}} \,dx \\
-&= lim_{n \to \infty} \int_{-\infty}^{x} \frac{1}{\sqrt{2\pi}}e^{-\frac{\brak{x}^2}{2}} \,dx \\
+&= lim_{n \to \infty} \int_{-\infty}^{x} \frac{1}{\sqrt{2\pi\brak{\frac{2n-1}{n}}}}e^{-\frac{\brak{x-0}^2}{2\brak{\frac{2n-1}{n}}^2}} \,dx \\
+&=\int_{-\infty}^{x} \frac{1}{\sqrt{4\pi}}e^{-\frac{\brak{x}^2}{4}} \,dx \\
 &=F_P(x)
 \end{align}
 where, $P \sim \mathcal{N}(0,1)$ \\
@@ -299,10 +296,10 @@ So, option (A) is correct\
 \item For 2nd mean to be converging to 0,
 \begin{align}
 lim_{n \to \infty} E(|Y_n-0|^2)&=lim_{n \to \infty} E(Y_n^2) \\
-&\because \frac{1}{n} = E(Y_n^2) - [E(Y_n)]^2 \\
-&=lim_{n \to \infty} \frac{1}{n} + [E(Y_n)]^2 \\
+&\because \frac{2n-1}{n^2} = E(Y_n^2) - [E(Y_n)]^2 \\
+&=lim_{n \to \infty} \frac{2n-1}{n^2} + [E(Y_n)]^2 \\
 &\because [E(Y_n)]^2 = 0 \\
-&=lim_{n \to \infty} \frac{1}{n} = 0 
+&=lim_{n \to \infty} \frac{2n-1}{n^2} = 0 
 \end{align}
 Thus,$\{Y_n\}_{n \geq 1}$ converges in 2nd mean to 0
 Hence, option (B) is correct.
@@ -313,7 +310,7 @@ Hence, option (B) is correct.
 &\leq \lim_{n \to \infty} \frac{Var(Y_n +\frac{1}{n})}{\epsilon^2} \\
 & \forall \epsilon > 0 \\
 &=\lim_{n \to \infty} \frac{Var(Y_n)+Var(\frac{1}{n})}{\epsilon^2} \\
-&=\lim_{n \to \infty} \frac{\frac{1}{n}+0}{\epsilon^2} \\
+&=\lim_{n \to \infty} \frac{\frac{2n-1}{n^2}+0}{\epsilon^2} \\
 &= 0
 \end{align} 
 \item For $X_n = \sum_{i=1}^n X_i$ converges almost surely to $0$. \\

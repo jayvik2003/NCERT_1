@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.8.9)  24 OCT 2023 16:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.8.9)  25 OCT 2023 05:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1274,25 +1274,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 234--236
 
  []
 
-
-Underfull \vbox (badness 1629) has occurred while \output is active []
-
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-Underfull \hbox (badness 1515) in paragraph at lines 302--305
+Underfull \hbox (badness 1515) in paragraph at lines 306--309
 \OT1/txr/m/n/12 Thus,$\OMS/txsy/m/n/12 f\OML/txmi/m/it/12 Y[]\OMS/txsy/m/n/12 g
 []$ \OT1/txr/m/n/12 con-verges in 2nd mean to 0
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--306
+Underfull \hbox (badness 10000) in paragraph at lines 309--310
 
  []
 
 
-Overfull \hbox (14.1486pt too wide) detected at line 314
+Overfull \hbox (14.1486pt too wide) detected at line 318
 []
  []
 
@@ -1301,9 +1298,9 @@ Package rerunfilecheck Info: File `57ST.2023.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30298 strings out of 476091
- 596120 string characters out of 5794082
- 1908330 words of memory out of 5000000
+ 30300 strings out of 476091
+ 596146 string characters out of 5794082
+ 1912330 words of memory out of 5000000
  49975 multiletter control sequences out of 15000+600000
  572228 words of font info for 149 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1317,10 +1314,10 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/urw/times/utmri8a.pfb>
-Output written on 57ST.2023.pdf (2 pages, 63795 bytes).
+Output written on 57ST.2023.pdf (2 pages, 63972 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
- 62 named destinations out of 1000 (max. 500000)
+ 141 PDF objects out of 1000 (max. 8388607)
+ 117 compressed objects within 2 object streams
+ 64 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -285,6 +285,10 @@ lim_{n \to \infty} F_{P_n}(x) = F_{P}(x)
 \end{align}
 since it is true for all p, so it is also be true for normal distribution
 \begin{align}
+\text{E}\brak{\sqrt{n}Y_n}=\sqrt{n}\text{E}\brak{Y_n}=0 \\
+\text{Var}\brak{\sqrt{n}Y_n}=\brak{\sqrt{n}}^2\text{Var}\brak{Y_n} = 1
+\end{align}
+\begin{align}
 lim_{n \to \infty} F_{\sqrt{n}Y_n} 
 &= lim_{n \to \infty} \int_{-\infty}^{x} \frac{1}{\sqrt{2\pi\brak{1}}}e^{-\frac{\brak{x-0}^2}{2\brak{1}^2}} \,dx \\
 &= lim_{n \to \infty} \int_{-\infty}^{x} \frac{1}{\sqrt{2\pi}}e^{-\frac{\brak{x}^2}{2}} \,dx \\

@@ -289,9 +289,11 @@ since it is true for all p, so it is also be true for normal distribution
 lim_{n \to \infty} F_{\sqrt{n}Y_n} 
 &= lim_{n \to \infty} \int_{-\infty}^{x} \frac{1}{\sqrt{2\pi\brak{\frac{2n-1}{n}}}}e^{-\frac{\brak{x-0}^2}{2\brak{\frac{2n-1}{n}}}} \,dx \\
 &=\int_{-\infty}^{x} \frac{1}{\sqrt{4\pi}}e^{-\frac{\brak{x}^2}{4}} \,dx \\
+&=\int_{-\infty}^{x} \frac{1}{\sqrt{2\pi}}e^{-\frac{\brak{\frac{x}{\sqrt{2}}}^2}{2}} \,d\brak{\frac{x}{\sqrt{2}}} \\
+&=\int_{-\infty}^{x} \frac{1}{\sqrt{2\pi}}e^{-\frac{\brak{x}^2}{2}} \,dx \\
 &=F_P(x)
 \end{align}
-where, $P \sim \mathcal{N}(0,\sqrt{2})$ \\
+where, $P \sim \mathcal{N}(0,1)$ \\
 So, option (A) is correct\
 \item For 2nd mean to be converging to 0,
 \begin{align}

@@ -231,110 +231,118 @@ Then which of the following statements is/are true?
 \item $\{Y_n+\frac{1}{n}\}_{n \geq 1}$ converges in probability to 0.
 \item $\{X_n\}_{n \geq 1}$ converges almost surely to 0.
 \end{enumerate}
-\textbf{Solution:}As $X_i$ is a sequence of independent and identically distributed random variables, \\
-Let $Z_i = X_iX_{i+1}$. \\ 
+\textbf{Solution:}\begin{enumerate}
+\item $X_n$ converges in distribution to a standard normal random variable $X$, $X_n \xrightarrow{d} X$, then for all x,
 \begin{align}
-p_{Z_iZ_j}(x)&=p_{X_iX_{i+1}X_jX_{j+1}}(x) \\ 
-&= p_{X_i}(x)p_{X_{i+1}}(x)p_{X_j}(x)p_{X_{j+1}}(x) \\
-&= p_{X_iX_{i+1}}(x)p_{X_jX_{j+1}}(x) \\
+\lim_{n \to \infty} F_{X_n}(x) &= F_X(x)
+\end{align}
+where, $X \sim \mathcal{N}(0,1)$
+\item $X_n$ converges in $p^{th}$ mean to $X$, then we have
+\begin{align}
+\lim_{n \to \infty} E(|X_n-X|^p)&=0
+\end{align}
+\item $X_n$ converges in probability to $X$, $X_n \xrightarrow{p} X$, then for all $\epsilon > 0$,
+\begin{align}
+\lim_{n \to \infty} \pr{|X_n-X|>\epsilon}&=0
+\end{align}
+\item $X_n$ converges almost surely to $X$, $X_n \xrightarrow{p} X$, then for all $\epsilon > 0$,
+\begin{align}
+\lim_{n \to \infty} \pr{|X_n - X| \geq  \epsilon} = 1 
+\end{align}
+\item Chebyshev's inequaltiy,
+\begin{align}
+\pr{|X-\mu|\geq k\sigma} \leq \frac{\sigma^2}{\brak{\sigma k}^2}
+\end{align}
+\end{enumerate}
+Now, as $X_i$ is a sequence of independent and identically distributed random variables, \\
+Let $Z_i = X_{2i-1}X_{2i}$. \\ 
+\begin{align}
+p_{Z_iZ_j}(x)&=p_{X_{2i-1}X_{2i}X_{2j-1}X_{2j}}(x) \\ 
+&= p_{X_{2i-1}}(x)p_{X_{2i}}(x)p_{X_{2j-1}}(x)p_{X_{2j}}(x) \\
+&= p_{X_{2i-1}X_{2i}}(x)p_{X_{2j-1}X_{2j}}(x) \\
 &= p_{Z_i}(x)p_{Z_j}(x)
 \end{align}
 $Z_i$ is a independent R.V . Similarly,
 \begin{align}
-F_{X_i}(x) = F_{X_{i+1}}(x) = F_{X_j}(x) = F_{X_{j+1}}(x) \\
-F_{X_i}(x)F_{X_{i+1}}(x) = F_{X_j}(x)F_{X_{j+1}}(x) \\
+F_{X_{2i-1}}(x) = F_{X_{2i}}(x) = F_{X_{2j-1}}(x) = F_{X_{2j}}(x) \\
+F_{X_{2i-1}}(x)F_{X_{2i}}(x) = F_{X_{2j-1}}(x)F_{X_{2j}}(x) \\
 F_{Z_i}(x) = F_{Z_j}(x)
 \end{align}
 Thus, $Z_i$ is an identical distributed R.V. \\
 Hence,
-\begin{align} Z_n=\sum_{i=1}^{2n-1}Z_i 
+\begin{align} Z_n=\sum_{i=1}^{n}Z_i 
 \end{align} is an i.i.d 
 \begin{align}
-\text{E}\brak{Z_i}&=\text{E}\brak{X_iX_{i+1}} \\
-&=\text{E}\brak{X_i}\text{E}\brak{X_{i+1}} = 0 \\
+\text{E}\brak{Z_i}&=\text{E}\brak{X_{2i-1}X_{2i}} \\
+&=\text{E}\brak{X_{2i-1}}\text{E}\brak{X_{2i}} = 0 \\
 \text{Var}(Z_i)&=\text{E}(Z_i^2)-\sbrak{\text{E}\brak{Z_i}}^2 \\
 &=\text{E}(Z_i^2)-0 \\ 
-&=\text{E}(X_i^2X_{i+1}^2) \\
-&=\text{E}(X_{i}^2)\text{E}(X_{i+1}^2) = 1  
+&=\text{E}(X_{2i-1}^2X_{2i}^2) \\
+&=\text{E}(X_{2i-1}^2)\text{E}(X_{2i}^2) = 1  
 \end{align}
+Now,
 \begin{align}
-Y_n&=\frac{1}{n}\brak{\sum_{i=1}^{2n-1} Z_i} \\
-\text{E}(Y_n)&=\text{E}(\frac{1}{n}\sum_{i=1}^{2n-1} Z_i) \\
-&= \frac{1}{n}\sum_{i=1}^{2n-1} \text{E}(Z_i) = 0 
+Y_n&=\frac{1}{n}\brak{\sum_{i=1}^{n} Z_i} \\
+\text{E}(Y_n)&=\text{E}\brak{\frac{1}{n}\sum_{i=1}^{n} Z_i} \\
+&= \frac{1}{n}\sum_{i=1}^{n} \text{E}(Z_i) = 0 
 \end{align}
 As all the variables are i.i.d's and are thus uncorrelated,
 \begin{align}
 &\text{cov}\brak{X_i, X_j} =
 \begin{cases}
 	0 & \text{if } i \ne j\\
-    \text{var}\brak{X_i} & \text{if } i = j
+    \text{Var}\brak{X_i} & \text{if } i = j
 \end{cases} \\
-\text{var}\brak{Y_n}&=\frac{1}{n^2}\brak{\sum_{i=1}^{2n-1}\text{cov}\brak{Z_i, Z_i}}\\
-&= \frac{1}{n^2} \brak{\sum_{i=1}^{2n-1} \text{var}\brak{Z_i}}\\
-&= \frac{1}{n^2} \brak{\sum_{i=1}^{2n-1} 1}\\
-&= \frac{2n-1}{n^2}
+\text{Var}\brak{Y_n}&=\frac{1}{n^2}\brak{\sum_{i=1}^{n}\text{cov}\brak{Z_i, Z_i}}\\
+&= \frac{1}{n^2} \brak{\sum_{i=1}^{n} \text{var}\brak{Z_i}}\\
+&= \frac{1}{n^2} \brak{\sum_{i=1}^{n} 1}\\
+&= \frac{1}{n}
 \end{align}
 \begin{enumerate}[label=(\Alph*)]
-\item 
-For some $\{P_n\}_{n \geq 1}$  converges in distribution to $P$, $P_n \xrightarrow{d} P$, then for all p,
+\item by central limit theorem,
 \begin{align}
-lim_{n \to \infty} F_{P_n}(x) = F_{P}(x) 
+&\frac{Y_n-\mu}{\sigma} \sim \mathcal{N}(0,1) \\
+&= \frac{Y_n-0}{\sqrt{\frac{1}{n}}} \sim \mathcal{N}(0,1) \\
+&= \sqrt{n}Y_n \sim \mathcal{N}(0,1)  
 \end{align}
-since it is true for all p, so it is also be true for normal distribution
+Thus,
 \begin{align}
-\text{E}\brak{\sqrt{n}Y_n}=\sqrt{n}\text{E}\brak{Y_n}=0 \\
-\text{Var}\brak{\sqrt{n}Y_n}=\brak{\sqrt{n}}^2\text{Var}\brak{Y_n} = \frac{2n-1}{n}
-\end{align}
-\begin{align}
-lim_{n \to \infty} F_{\sqrt{n}Y_n} 
-&= lim_{n \to \infty} \int_{-\infty}^{x} \frac{1}{\sqrt{2\pi\brak{\frac{2n-1}{n}}}}e^{-\frac{\brak{x-0}^2}{2\brak{\frac{2n-1}{n}}}} \,dx \\
-&=\int_{-\infty}^{x} \frac{1}{\sqrt{4\pi}}e^{-\frac{\brak{x}^2}{4}} \,dx \\
-&=\int_{-\infty}^{x} \frac{1}{\sqrt{2\pi}}e^{-\frac{\brak{\frac{x}{\sqrt{2}}}^2}{2}} \,d\brak{\frac{x}{\sqrt{2}}} \\
-&=\int_{-\infty}^{x} \frac{1}{\sqrt{2\pi}}e^{-\frac{\brak{x}^2}{2}} \,dx \\
+\lim_{n \to \infty} F_{\sqrt{n}Y_n} 
 &=F_P(x)
 \end{align}
 where, $P \sim \mathcal{N}(0,1)$ \\
 So, option (A) is correct\
 \item For 2nd mean to be converging to 0,
 \begin{align}
-lim_{n \to \infty} E(|Y_n-0|^2)&=lim_{n \to \infty} E(Y_n^2) \\
-&\because \frac{2n-1}{n^2} = E(Y_n^2) - [E(Y_n)]^2 \\
-&=lim_{n \to \infty} \frac{2n-1}{n^2} + [E(Y_n)]^2 \\
+\lim_{n \to \infty} E(|Y_n-0|^2)&=\lim_{n \to \infty} E(Y_n^2) \\
+&\because \frac{1}{n} = E(Y_n^2) - [E(Y_n)]^2 \\
+&=\lim_{n \to \infty} \frac{1}{n} + [E(Y_n)]^2 \\
 &\because [E(Y_n)]^2 = 0 \\
-&=lim_{n \to \infty} \frac{2n-1}{n^2} = 0 
+&=\lim_{n \to \infty} \frac{1}{n} = 0 
 \end{align}
 Thus,$\{Y_n\}_{n \geq 1}$ converges in 2nd mean to 0
 Hence, option (B) is correct.
 \item For $\{Y_n+\frac{1}{n}\}_{n \geq 1}$ to be converging $Y_n +\frac{1}{n} \xrightarrow{p} 0$ \\
 \begin{align}
-\lim_{n \to \infty} \pr{|Y_n +\frac{1}{n}-Y| \geq  \epsilon} 
-&=\lim_{n \to \infty} \pr{|Y_n +\frac{1}{n}| \geq  \epsilon} \\ 
-&\leq \lim_{n \to \infty} \frac{Var(Y_n +\frac{1}{n})}{\epsilon^2} \\
+\lim_{n \to \infty} \pr{\left|Y_n +\frac{1}{n}-Y\right| \geq  \epsilon} 
+&=\lim_{n \to \infty} \pr{\left|Y_n +\frac{1}{n}\right| \geq  \epsilon} \\ 
+&\leq \lim_{n \to \infty} \frac{\text{Var}(Y_n +\frac{1}{n})}{\epsilon^2} \\
 & \forall \epsilon > 0 \\
-&=\lim_{n \to \infty} \frac{Var(Y_n)+Var(\frac{1}{n})}{\epsilon^2} \\
-&=\lim_{n \to \infty} \frac{\frac{2n-1}{n^2}+0}{\epsilon^2} \\
+&=\lim_{n \to \infty} \frac{\text{Var}(Y_n)+\text{Var}(\frac{1}{n})}{\epsilon^2} \\
+&=\lim_{n \to \infty} \frac{\frac{1}{n}+0}{\epsilon^2} \\
 &= 0
-\end{align} 
-\item For $X_n = \sum_{i=1}^n X_i$ converges almost surely to $0$. \\
-$X_n \xrightarrow{p} X$ ,where $X=0$.
-and,
-\begin{align}
-\lim_{n \to \infty} \pr{|X_n - X| \geq  \epsilon} = 1 
 \end{align}
+hence, option (C) is correct 
+\item 
 As all the variables are i.i.d's and are thus uncorrelated,
 \begin{align}
-&\text{cov}\brak{X_i, X_j} =
-\begin{cases}
-	0 & \text{if } i \ne j\\
-    \text{var}\brak{X_i} & \text{if } i = j
-\end{cases} \\
-\text{var}\brak{X_n}&=\sum_{i=1}^{n}\text{cov}\brak{X_i, X_i} \\
+\text{Var}\brak{X_n}&=\sum_{i=1}^{n}\text{cov}\brak{X_i, X_i} \\
 &= \sum_{i=1}^{n} \text{var}\brak{X_i}\\
 &= \sum_{i=1}^{n} 1\\
 &= n
 \end{align}
 \begin{align}
-\lim_{n \to \infty} \pr{|X_n| \geq  \epsilon}  
+\lim_{n \to \infty} \pr{|X_n-0| \geq  \epsilon}  
 \leq \lim_{n \to \infty} \frac{Var(X_n)}{\epsilon^2} \\
 & \forall \epsilon > 0 \\
 =\lim_{n \to \infty} \frac{Var(X_n)}{\epsilon^2} \\

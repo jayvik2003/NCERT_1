@@ -245,15 +245,37 @@ where, $X \sim \mathcal{N}(0,1)$
 \begin{align}
 \lim_{n \to \infty} \pr{|X_n-X|>\epsilon}&=0
 \end{align}
-\item $X_n$ converges almost surely to $X$, $X_n \xrightarrow{p} X$, then for all $\epsilon > 0$,
+\item $X_n$ converges almost surely to $X$, $X_n \xrightarrow{a.s} X$, then for all $\epsilon > 0$,
 \begin{align}
 \lim_{n \to \infty} \pr{|X_n - X| \geq  \epsilon} = 1 
 \end{align}
 \item Chebyshev's inequaltiy,
 \begin{align}
-\pr{|X-\mu|\geq k\sigma} \leq \frac{\sigma^2}{\brak{\sigma k}^2}
+\pr{|X-\mu|\geq \epsilon} \leq \frac{\sigma^2}{\epsilon^2}
 \end{align}
 \end{enumerate}
+\begin{align}
+\text{E}(X)&=\int_{-\infty}^\infty xF_X{x}dx \\
+&\because X \text{ is positive-valued} \\
+&=\int_{0}^\infty xF_X{x}dx \\ 
+&\geq \int_{\epsilon^2}^\infty xF_X{x}dx \\ 
+&\geq \int_{\epsilon^2}^\infty kF_X{x}dx \\
+&=k\int_{\epsilon^2}^\infty F_X{x}dx \\
+\label{eq13}&=\epsilon^2\pr{X\geq \epsilon^2}
+\end{align}
+Now,
+\begin{align}
+\sigma^2 &= \text{E}(X^2) - [\text{E}(X)]^2 \\
+\sigma^2 &= \text{E}(X^2) - \mu^2 \\
+\sigma^2 &= \text{E}(X^2) - \text{E}(\mu^2) \\
+\sigma^2 &= \text{E}(X^2-\mu^2)
+\end{align}
+using \eqref{eq13},
+\begin{align}
+\sigma^2 = \epsilon^2\pr{X^2-\mu^2\geq \epsilon^2} \\
+\frac{\sigma^2}{\epsilon^2} = \pr{X^2-\mu^2\geq \epsilon^2} \\
+\pr{|X-\mu|\geq \epsilon} = \frac{\sigma^2}{\epsilon^2} 
+\end{align}
 Now, as $X_i$ is a sequence of independent and identically distributed random variables, \\
 Let $Z_i = X_{2i-1}X_{2i}$. \\ 
 \begin{align}

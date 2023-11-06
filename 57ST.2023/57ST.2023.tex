@@ -255,7 +255,7 @@ where, $X \sim \mathcal{N}(0,1)$
 &\because X \text{ is positive-valued} \\
 &=\int_{0}^\infty xF_X{x}dx \\ 
 &\geq \int_{\epsilon^2}^\infty xF_X{x}dx \\ 
-&\text{for some } \epsilon > 0 \\
+&\text{for some } \epsilon^2 > 0 \\
 &\geq \int_{\epsilon^2}^\infty kF_X{x}dx \\
 &=\epsilon^2\int_{\epsilon^2}^\infty F_X{x}dx \\
 \label{eq13}\text{E}(X)&=\epsilon^2\pr{X\geq \epsilon^2} 
@@ -372,4 +372,18 @@ As all the variables are i.i.d's and are thus uncorrelated,
 \end{align} 
 Hence,option (D) is incorrect
 \end{enumerate}
+\textbf{Simulation:}
+\begin{enumerate}
+\item we take $X_i$ as uniform R.V and generate it by using \textbf{generateUniformRandom()}
+\item for A, we intialize $Y_n$ in the \textbf{main()} and standardize $Y_n$ and save it to file and plot it in python. Also, compare it to standard normal distribution.
+\item for B, we define a function \textbf{calculate2ndmean} to compute 2nd mean to see its convergence
+\item for C, we define a \textbf{calculateYnplus1overn} to define the sequence $Y_n + \frac{1}{n}$ and compute the proportion of simulation i.e $\pr{\left|Y_n +\frac{1}{n}-Y\right| \geq  \epsilon}$
+\item for D, we define a \textbf{simulateXn} to define the sequence $X_n$. \item To check convergence almost surely by a function \textbf{checkconvergencealmostsurely} that computes $\pr{|X_n| < \epsilon}$ and if $ \geq 1 $ then it does not converges almost surely.
+\end{enumerate}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\columnwidth]{/home/jay/Desktop/ncert1/57ST.2023/codes/sim.png}
+\caption{simulated vs standard normal }
+\label{fig:9.3.6/F/Fig1}
+\end{figure}
 \end{document}

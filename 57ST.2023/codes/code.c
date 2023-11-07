@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
-#define N 10000 // Number of simulations
+#define N 1000 // Number of simulations
 
 double generateUniformRandom()
 {
@@ -105,7 +105,7 @@ int main()
   for (n = 1; n <= N; n++)
   {
     Yn = 0;
-    for (int i = 0; i < 4 * n; i++)
+    for (int i = 0; i < 8 * n; i++)
     {
       Yn += generateUniformRandom() * generateUniformRandom();
     }

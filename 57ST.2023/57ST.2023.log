@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.8.9)  7 NOV 2023 04:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2023.8.9)  7 NOV 2023 10:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1313,9 +1313,6 @@ Package pdftex.def Info: /home/jay/Desktop/ncert1/57ST.2023/codes/sim.png  used
  on input line 385.
 (pdftex.def)             Requested size: 252.0pt x 189.00032pt.
 [3 </home/jay/Desktop/ncert1/57ST.2023/codes/sim.png>] (./57ST.2023.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `57ST.2023.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
@@ -1336,7 +1333,7 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/urw/times/utmri8a.pfb>
-Output written on 57ST.2023.pdf (3 pages, 105285 bytes).
+Output written on 57ST.2023.pdf (3 pages, 104592 bytes).
 PDF statistics:
  178 PDF objects out of 1000 (max. 8388607)
  151 compressed objects within 2 object streams

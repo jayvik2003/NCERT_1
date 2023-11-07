@@ -105,7 +105,7 @@ int main()
   for (n = 1; n <= N; n++)
   {
     Yn = 0;
-    for (int i = 0; i < 8 * n; i++)
+    for (int i = 0; i < 9 * n; i++)
     {
       Yn += generateUniformRandom() * generateUniformRandom();
     }
